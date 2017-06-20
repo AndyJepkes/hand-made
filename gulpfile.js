@@ -1,10 +1,15 @@
 var gulp = require('gulp');
+var less = require('gulp-less');
 
 gulp.task('html', function(){
     console.log("Cool HTML stuff just happened!");    
 });
 
-gulp.task('css', function(){
+gulp.task('styles', function(){
+    gulp.src('./app/assets/styles/less/main.less')
+    .pipe(less())
+    .pipe(gulp.dest('./app/temp/styles'));
+
     console.log("Cool CSS stuff just happened!");    
 });
 
@@ -15,8 +20,8 @@ gulp.task('default', function(){
         gulp.start('html');
     });
 
-    gulp.watch('./app/assets/styles/*.css', function(){
-        gulp.start('css');
+    gulp.watch('./app/assets/styles/less/*.less', function(){
+        gulp.start('styles');
     });
-    
+
 });
