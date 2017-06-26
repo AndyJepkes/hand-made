@@ -15,7 +15,8 @@ gulp.task('styles', function(){
 
 gulp.task('default', function(){
     console.log("gulpin' like a boss!");
-
+    gulp.start('styles');
+    
     gulp.watch('./app/index.html', function(){
         gulp.start('html');
     });
