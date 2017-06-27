@@ -11,6 +11,7 @@
     "postcss-simple-vars": "^4.0.0"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "gulp": "^3.9.1"
   },
   "scripts": {
