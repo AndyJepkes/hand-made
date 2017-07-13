@@ -419,6 +419,10 @@ body {
 }
 .large-hero {
   position: relative;
+  border-bottom: 10px solid #2f5572;
+}
+.large-hero__image {
+  display: block;
 }
 .large-hero__text-content {
   position: absolute;
@@ -451,7 +455,7 @@ body {
 .large-hero__subtitle {
   font-weight: 300;
   color: #2f5572;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   margin: 0;
 }
 .large-hero__description {
@@ -461,4 +465,45 @@ body {
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
   max-width: 30rem;
   margin: auto;
+}
+.wrapper {
+  padding-left: 18px;
+  padding-right: 18px;
+  max-width: 1200px;
+  margin: auto;
+}
+.page-section {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+.page-section--blue {
+  background-color: #2f5572;
+  color: #fff;
+}
+.headline {
+  font-weight: 300;
+  font-size: 2.875rem;
+  color: #2f5572;
+}
+.headline--centered {
+  text-align: center;
+}
+.headline--orange {
+  color: #d59541;
+}
+.headline--small {
+  font-size: 1.875rem;
+}
+.headline--narrow {
+  max-width: 500px;
+  margin: auto;
+}
+.headline--light {
+  font-weight: 100;
+}
+.headline--b-margin-small {
+  margin-bottom: .5em;
+}
+.headline--b-margin-large {
+  margin-bottom: 1.6em;
 }
