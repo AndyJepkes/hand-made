@@ -389,6 +389,9 @@ template {
 [hidden] {
   display: none;
 }
+* {
+  box-sizing: border-box;
+}
 html {
   font-size: 16px;
 }
@@ -402,6 +405,50 @@ img {
 body {
   font-family: 'roboto', sans-serif;
   color: #333;
+}
+.clear-fix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* @atMedium: ~"only screen and (min-width: 800px)"; */
+.wrapper {
+  overflow: hidden;
+  padding-left: 18px;
+  padding-right: 18px;
+  max-width: 1200px;
+  margin: auto;
+}
+.wrapper--medium {
+  max-width: 976px;
+}
+.wrapper .wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+.row {
+  margin-right: -65px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.row--gutters > div {
+  padding-right: 65px;
+}
+.row__4 {
+  float: left;
+  width: 33.33333333%;
+}
+.row__8 {
+  float: left;
+  width: 66.66666667%;
+}
+.row__8::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 .btn {
   background-color: #2f5572;
@@ -466,15 +513,25 @@ body {
   max-width: 30rem;
   margin: auto;
 }
-.wrapper {
-  padding-left: 18px;
-  padding-right: 18px;
-  max-width: 1200px;
-  margin: auto;
-}
 .page-section {
+  font-size: 1.3rem;
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
+}
+@media (min-width: 800px) {
+  .page-section {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .page-section {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 720) {
+  .page-section {
+    padding-bottom: 2.5rem;
+  }
 }
 .page-section--blue {
   background-color: #2f5572;
@@ -482,7 +539,7 @@ body {
 }
 .headline {
   font-weight: 300;
-  font-size: 2.875rem;
+  font-size: 1.9rem;
   color: #2f5572;
 }
 .headline--centered {
@@ -492,7 +549,7 @@ body {
   color: #d59541;
 }
 .headline--small {
-  font-size: 1.875rem;
+  font-size: 1.2rem;
 }
 .headline--narrow {
   max-width: 500px;

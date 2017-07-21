@@ -1,6 +1,17 @@
 .page-section {
+    font-size: 1.3rem;
     padding-top: 4.5rem;
+
+    .atMedium(1.2rem);
+    .atLarge(1rem);
+    
     padding-bottom: 4.5rem;
+    
+    @media only screen and (max-width: 720) {
+        padding-bottom: 2.5rem;
+    }
+
+    
 
     &--blue {
         background-color: @main-color;
