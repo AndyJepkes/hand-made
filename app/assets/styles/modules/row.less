@@ -6,14 +6,21 @@
         padding-right: 65px;
     }
 
+    width:100%;
+
     &__4 {
         float: left;
-        width:(1% * ((4/12) * 100));
+        @media @desktop, @tablet {
+            width:(1% * ((4/12) * 100));    
+        }
     }
+
 
     &__8 {
         .clear-fix;
         float: left;
-        width:(1% * ((8/12) * 100));
+        @media @desktop, @tablet {
+            width:(1% * ((8/12) * 100));
+        }
     }
 }
