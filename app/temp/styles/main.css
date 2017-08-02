@@ -461,6 +461,14 @@ body {
     width: 33.33333333%;
   }
 }
+.row__6 {
+  float: left;
+}
+@media only screen and (min-width: 960px), only screen and (min-width: 720px) and (max-width: 959px) {
+  .row__6 {
+    width: 50%;
+  }
+}
 .row__8 {
   float: left;
 }
@@ -592,4 +600,12 @@ body {
   .headline--no-t-margin {
     margin-top: 0;
   }
+}
+.section-title {
+  font-size: 3.75rem;
+  font-weight: 300;
+  text-align: center;
+}
+.section-title strong {
+  font-weight: 500;
 }
